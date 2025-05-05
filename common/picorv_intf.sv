@@ -23,6 +23,10 @@ interface picorv_intf (
   );
 
 `ifdef RISCV_FORMAL
+  rvfi_intf rvfi_intf_i (
+      clk,
+      resetn
+  );
 `endif
 
 endinterface  //picorv_intf
