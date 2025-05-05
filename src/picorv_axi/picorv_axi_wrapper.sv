@@ -1,4 +1,4 @@
-module dut_wrapper (
+module picorv_axi_wrapper (
     input logic clk,
     input logic resetn,
     picorv_intf pif
@@ -36,6 +36,7 @@ module dut_wrapper (
       .clk(clk),
       .resetn(resetn),
       .trap(pif.trap),
+
       .mem_axi_awvalid(pif.axil_intf_i.mem_axi_awvalid),
       .mem_axi_awready(pif.axil_intf_i.mem_axi_awready),
       .mem_axi_awaddr (pif.axil_intf_i.mem_axi_awaddr),
@@ -53,6 +54,7 @@ module dut_wrapper (
       .mem_axi_rvalid (pif.axil_intf_i.mem_axi_rvalid),
       .mem_axi_rready (pif.axil_intf_i.mem_axi_rready),
       .mem_axi_rdata  (pif.axil_intf_i.mem_axi_rdata),
+
       .pcpi_valid(pif.pcpi_intf_i.pcpi_valid),
       .pcpi_insn (pif.pcpi_intf_i.pcpi_insn),
       .pcpi_rs1  (pif.pcpi_intf_i.pcpi_rs1),
@@ -61,6 +63,7 @@ module dut_wrapper (
       .pcpi_rd   (pif.pcpi_intf_i.pcpi_rd),
       .pcpi_wait (pif.pcpi_intf_i.pcpi_wait),
       .pcpi_ready(pif.pcpi_intf_i.pcpi_ready),
+
       .irq(pif.irq_intf_i.irq),
       .eoi(pif.irq_intf_i.eoi),
 

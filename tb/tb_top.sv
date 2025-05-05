@@ -11,7 +11,7 @@ module tb_top;
       resetn
   );
 
-  picorv_axi_wrapper picorv_axi_uut (
+  dv_top dv_top_i (
       .clk(clk),
       .resetn(resetn),
       .pif(pif)
